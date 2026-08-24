@@ -1,0 +1,9 @@
+# No build step: the game is a single pre-built HTML file.
+# Netlify still installs dependencies so the function can import @netlify/blobs.
+[build]
+  publish = "."
+  command = "echo 'nothing to build'"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
